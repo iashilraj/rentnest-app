@@ -4,7 +4,8 @@ import React from 'react';
 const Header = () => {
   return (
     <header className="header">
-      <h1>RentNest</h1>
+      <img src="https://drive.google.com/thumbnail?id=1lCnotWkKqGhqp_GPxmWSPORD4U0FliUM"></img>
+      
     </header>
   );
 };
