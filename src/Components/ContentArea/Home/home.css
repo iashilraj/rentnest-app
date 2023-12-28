@@ -99,6 +99,6 @@
   
   @media (max-width: 767px) {
     .listing {
-      flex: 1 0 100%; /* Change to 100% width for 1-column layout */
+      flex: 1 0 90%; /* Change to 100% width for 1-column layout */
     }
   }
