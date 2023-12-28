@@ -1,0 +1,21 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s; /* Add transition for a smoother effect */
+    transform: translateY(100%); /* Initially hide the footer off-screen */
+  }
+  
+  .footer.show {
+    transform: translateY(0); /* Show the footer when the show class is present */
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  

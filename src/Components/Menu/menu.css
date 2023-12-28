@@ -1,0 +1,47 @@
+.menu {
+  background-color: #eee;
+  height: 50px;
+}
+
+.menu ul {
+  height: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu li:hover {
+  background-color: #ddd;
+}
+
+.menu li.active {
+  font-weight: bold;
+  background-color: #464646;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
+  .menu {
+    height: 100%;
+  }
+  .menu ul {
+    display: block;
+    height: auto; 
+    flex-direction: column;
+  }
+
+  .menu li {
+    display: flex;
+    padding: 15px 0;
+  }
+}
