@@ -1,14 +1,20 @@
 import React from 'react';
 import './listing.css';
 
-export function Listing({ products, numberofItems, randomize }) {
+export function Listing({ products, numberofItems, selectedCategory }) {
   // Check if products is defined and is an array, otherwise default to an empty array
   const slicedProducts = products ?? [];
+  console.log(selectedCategory);
+
+  // Filter products based on the selected category
+  const filteredProducts = selectedCategory
+    ? slicedProducts.filter((product) => product.category === selectedCategory)
+    : slicedProducts;
 
   return (
     <div className="app-container">
       <div className="product-list">
-        {slicedProducts.slice(0, numberofItems).map((product) => (
+        {filteredProducts.slice(0, numberofItems).map((product) => (
           <div className="product-item" key={product.id}>
             <img src={product.image} alt={product.title} />
             <div className="product-details">

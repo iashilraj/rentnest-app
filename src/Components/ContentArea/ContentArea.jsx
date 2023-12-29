@@ -4,6 +4,7 @@ import { Listing } from './Listing/Listing';
 
 const ContentArea = ({ activeMenu }) => {
   const [products, setProducts] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,7 +23,7 @@ const ContentArea = ({ activeMenu }) => {
   return (
     <div className="content-area">
       {activeMenu === 'home' && <HomeContent products={products}/>}
-      {activeMenu === 'listings' && <ListingsContent products={products} />}
+      {activeMenu === 'listings' && <ListingsContent products={products} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />}
       {activeMenu === 'profile' && <ProfileContent />}
     </div>
   );
@@ -34,7 +35,7 @@ const HomeContent = ({products}) => (
   </div>
 );
 
-const ListingsContent = ({ products }) => {
+const ListingsContent = ({ products, selectedCategory, setSelectedCategory }) => {
   // Create a Set to store unique category names
   const uniqueCategories = new Set();
 
@@ -46,17 +47,28 @@ const ListingsContent = ({ products }) => {
   // Convert the Set back to an array
   const uniqueCategoriesArray = Array.from(uniqueCategories);
 
+  const clearFilter = () => {
+    setSelectedCategory('');
+  };
+
   return (
     <div>
       <section className="categories">
         <h2>Categories</h2>
         <ul>
           {uniqueCategoriesArray.map((category) => (
-            <li key={category}>{category}</li>
+            <li key={category} onClick={() => setSelectedCategory(category)}>
+              {category}
+            </li>
           ))}
+          
+          {selectedCategory && (
+          <li id='clearbtn-li' onClick={clearFilter}>Clear Filter</li>
+          )}
+          
         </ul>
       </section>
-      <Listing products={products} />
+      <Listing products={products} selectedCategory={selectedCategory} />
     </div>
   );
 };

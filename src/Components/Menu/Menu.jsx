@@ -1,17 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './menu.css';
 
 const Menu = ({ onMenuSelect }) => {
   const [activeMenu, setActiveMenu] = useState('home');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleMenuClick = (menu) => {
     setActiveMenu(menu);
     onMenuSelect(menu);
+    closeMobileMenu();
   };
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
-    <nav className="menu">
+    <nav className={`menu ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
+      <div className="mobile-menu-icon" onClick={toggleMobileMenu}>
+        &#9776; {/* Hamburger icon */}
+      </div>
       <ul>
         <li onClick={() => handleMenuClick('home')} className={activeMenu === 'home' ? 'active' : ''}>
           Home

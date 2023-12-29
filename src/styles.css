@@ -55,6 +55,17 @@ body {
   background-color: #f8f8f8;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  height: 17px;
+}
+
+#clearbtn-li {
+  border: 1px solid #f99c9c;
+  background-color: white;
+  transition: none;
+}
+
+#clearbtn-li:hover {
+  background-color: #e6e6e6; /* Adjust background color on hover */
 }
 
 .categories li:hover {
