@@ -21,6 +21,7 @@
 
 .menu li:hover {
   background-color: #ddd;
+  cursor: pointer;
 }
 
 .menu li.active {

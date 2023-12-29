@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './menu.css';
 
 const Menu = ({ onMenuSelect }) => {
-  const [activeMenu, setActiveMenu] = useState('');
+  const [activeMenu, setActiveMenu] = useState('home');
 
   const handleMenuClick = (menu) => {
     setActiveMenu(menu);
     onMenuSelect(menu);
   };
+
 
   return (
     <nav className="menu">

@@ -1,42 +1,25 @@
 import React from 'react';
 import dummyData from '/src/Assets/dummyData.jsx'; 
 import './home.css';
+import { Listing } from '../Listing/Listing';
 
-const HomePage = () => {
+export default function Home ({products}) {
+
   return (
     <div className="home-page">
       <section className="featured-listings">
-        <h2>Featured Listings</h2>
-        <div className="listing-container">
-          {dummyData.featuredListings.map((listing) => (
-            <div key={listing.id} className="listing">
-              <div className="image-container">
-              <img src={listing.image} alt={listing.title} />
-              </div>
-              <h3>{listing.title}</h3>
-              <p>{listing.description}</p>
-              <p>Category: {listing.category}</p>
-              <p>Price: ${listing.price} per day</p>
-              <p>Location: {listing.location}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="categories">
-        <h2>Categories</h2>
-        <ul>
-          {dummyData.categories.map((category) => (
-            <li key={category}>{category}</li>
-          ))}
-        </ul>
+        <h2>Featured Items</h2>
+        <Listing products={products} numberofItems={6}/>
       </section>
 
       <section className="benefits">
         <h2>Benefits</h2>
         <ul>
-          {dummyData.benefits.map((benefit) => (
-            <li key={benefit}>{benefit}</li>
+          {dummyData.benefits.map((benefit, index) => (
+            <li key={index}>
+              <div className="benefit-icon">🚀</div>
+              {benefit}
+            </li>
           ))}
         </ul>
       </section>
@@ -66,5 +49,3 @@ const HomePage = () => {
     </div>
   );
 };
-
-export default HomePage;

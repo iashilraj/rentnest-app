@@ -4,7 +4,7 @@ import React from 'react';
 const Header = () => {
   return (
     <header className="header">
-      <img src="https://drive.google.com/thumbnail?id=1lCnotWkKqGhqp_GPxmWSPORD4U0FliUM"></img>
+      <img src="https://i.imgur.com/IoGsmhr.png"></img>
       
     </header>
   );
