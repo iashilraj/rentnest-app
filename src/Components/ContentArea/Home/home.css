@@ -2,107 +2,106 @@
 
 .home-page {
   text-align: center;
-    padding: 20px;
   }
   
-  .featured-listings {
-    margin-bottom: 30px;
-  }
-  
-  .benefits {
-    margin-bottom: 30px;
-  }
-  
-  .benefits h2 {
-    font-size: 28px;
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .benefits ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .benefits li {
-    width: 200px;
-    margin: 0 20px 20px 0;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f8f8f8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: background-color 0.3s ease;
-  }
-  
-  .benefits li:hover {
-    background-color: #e0e0e0;
-  }
-  
-  .benefit-icon {
-    font-size: 36px;
-    margin-bottom: 10px;
-  }
-  
-  .how-it-works {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .testimonials {
-    margin-bottom: 30px;
-  }
-  
-  .testimonial-container {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .testimonial {
-    width: 45%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-  }
-  
-  button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
+.featured-listings {
+  margin-bottom: 30px;
+}
 
-  /* src/FeaturedListings.css */
+.benefits {
+  margin-bottom: 30px;
+}
+
+.benefits h2 {
+  font-size: 28px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.benefits ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.benefits li {
+  width: 200px;
+  margin: 0 20px 20px 0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.benefits li:hover {
+  background-color: #e0e0e0;
+}
+
+.benefit-icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.how-it-works {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.testimonials {
+  margin-bottom: 30px;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.testimonial {
+  width: 45%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* src/FeaturedListings.css */
 
 .listing-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.listing {
+  width: 30%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+@media (max-width: 767px) {
   .listing {
-    width: 30%;
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    flex: 1 0 90%; /* Change to 100% width for 1-column layout */
   }
-  
-  @media (max-width: 767px) {
-    .listing {
-      flex: 1 0 90%; /* Change to 100% width for 1-column layout */
-    }
-  }
+}
 
